@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing & Fees | 365Sundays Wealth LLC</title>
+    <style>
+        :root {
+            --primary-blue: #0A192F;
+            --accent-gold: #C5A059;
+            --text-dark: #333333;
+            --bg-light: #F9FAFB;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            color: var(--text-dark);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        /* Navigation Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 1px solid #eaeaea;
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            letter-spacing: 0.5px;
+        }
+
+        .logo-subtitle {
+            font-size: 10px;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-blue);
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        .consultation-btn {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+
+        .consultation-btn:hover {
+            background-color: var(--accent-gold);
+        }
+
+        /* Main Content Layout */
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 38px;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: var(--primary-blue);
+            margin-top: 50px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent-gold);
+            padding-left: 12px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 17px;
+            color: #4A5568;
+        }
+
+        .lead-text {
+            font-size: 19px;
+            color: var(--primary-blue);
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #E2E8F0;
+            margin: 40px 0;
+        }
+
+        /* Fee Tables */
+        .fee-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background-color: var(--bg-light);
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid #E2E8F0;
+        }
+
+        .fee-table th, .fee-table td {
+            padding: 15px 20px;
+            text-align: left;
+            font-size: 16px;
+        }
+
+        .fee-table th {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .fee-table tr:not(:last-child) td {
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        .note {
+            font-size: 15px;
+            color: #718096;
+            font-style: italic;
+            margin-top: -10px;
+            margin-bottom: 25px;
+        }
+
+        /* List Styling for Specialties */
+        .specialty-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .specialty-item {
+            background-color: var(--bg-light);
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #E2E8F0;
+        }
+
+        .specialty-item h4 {
+            font-size: 17px;
+            color: var(--primary-blue);
+            margin-bottom: 8px;
+        }
+
+        .specialty-item p {
+            font-size: 15px;
+            margin-bottom: 0;
+            color: #4A5568;
+        }
+
+        /* Promise Box */
+        .promise-box {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            margin-top: 60px;
+        }
+
+        .promise-box h2 {
+            color: var(--accent-gold);
+            border-left: none;
+            padding-left: 0;
+            margin-top: 0;
+        }
+
+        .promise-box p {
+            color: #E2E8F0;
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 80px;
+            border-top: 2px solid var(--accent-gold);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 14px;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--accent-gold);
+        }
+
+        .copyright {
+            font-size: 13px;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 768px) {
+            .specialty-list {
+                grid-template-columns: 1fr;
+            }
+            header {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation Bar -->
+    <header>
+        <a href="index.html" class="logo-container">
+            <div class="logo-text">
+                <span class="logo-title">365Sundays</span>
+                <span class="logo-subtitle">Wealth LLC</span>
+            </div>
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Our Services</a>
+            <a href="whoweserve.html">Who We Serve</a>
+            <a href="pricing.html" style="color: var(--accent-gold);">Pricing</a>
+            <a href="clientlogin.html">Client Login</a>
+            <a href="consultation.html" class="consultation-btn">Private Wealth Consultation</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <h1>Transparent, Fiduciary Pricing</h1>
+        <p class="lead-text">At 365Sundays Wealth LLC, we believe in absolute transparency. As a fee-only, fiduciary firm, we do not earn commissions or hidden kickbacks—our only compensation comes directly from you.</p>
+
+        <div class="divider"></div>
+
+        <!-- Section 1 -->
+        <h2>1. Wealth Management Services (Assets Under Management)</h2>
+        <p>For ongoing, comprehensive portfolio management and continuous investment oversight, our fees are billed quarterly in arrears as a percentage of assets under management (AUM).</p>
+        
+        <table class="fee-table">
+            <tr>
+                <th>Asset Tier</th>
+                <th>Annualized Fee</th>
+            </tr>
+            <tr>
+                <td>$0 – $500,000</td>
+                <td>1.25%</td>
+            </tr>
+            <tr>
+                <td>$500,001 – $1,000,000</td>
+                <td>1.10%</td>
+            </tr>
+            <tr>
+                <td>$1,000,001 – $2,000,000</td>
+                <td>1.00%</td>
+            </tr>
+            <tr>
+                <td>$2,000,001 – $3,000,000</td>
+                <td>0.90%</td>
+            </tr>
+            <tr>
+                <td>$3,000,001 – $4,000,000</td>
+                <td>0.85%</td>
+            </tr>
+            <tr>
+                <td>$4,000,001 – $5,000,000</td>
+                <td>0.80%</td>
+            </tr>
+            <tr>
+                <td>$5,000,000 and Above</td>
+                <td>0.75%</td>
+            </tr>
+        </table>
+        <p class="note">Note: Fees are calculated using a blended tiered schedule, and household accounts can be aggregated to optimize your tier.</p>
+
+        <div class="divider"></div>
+
+        <!-- Section 2 -->
+        <h2>2. Project-Based & Comprehensive Financial Planning</h2>
+        <p>For clients seeking targeted strategic blueprints or project-based guidance without ongoing asset management, we charge a clear fixed fee.</p>
+        
+        <table class="fee-table">
+            <tr>
+                <th>Planning Scope</th>
+                <th>Fixed Fee Range</th>
+            </tr>
+            <tr>
+                <td>Comprehensive Project Engagement</td>
+                <td>$5,000 to $15,500</td>
+            </tr>
+        </table>
+        <p class="note">Tailored Complexity: Financial planning fees may vary depending on the complexity, specific scope of work, and resources required.</p>
+
+        <p>We specialize in high-complexity financial planning and advisory engagements, including:</p>
+        
+        <div class="specialty-list">
+            <div class="specialty-item">
+                <h4>Concentrated Stock Planning</h4>
+                <p>Advanced risk mitigation and single-stock management strategies.</p>
+            </div>
+            <div class="specialty-item">
+                <h4>Equity Compensation Planning</h4>
+                <p>Navigating ISOs, NSOs, RSUs, and ESPPs strategically.</p>
+            </div>
+            <div class="specialty-item">
+                <h4>Retirement Income Planning</h4>
+                <p>Designing sustainable distribution models for savers and spenders.</p>
+            </div>
+            <div class="specialty-item">
+                <h4>Business & Professional Practice</h4>
+                <p>Guidance through start-up, operational growth, and exit strategies.</p>
+            </div>
+            <div class="specialty-item">
+                <h4>Estate Planning Coordination</h4>
+                <p>Collaborating directly with your estate attorneys for proper alignment.</p>
+            </div>
+            <div class="specialty-item">
+                <h4>Liquidity Event Planning</h4>
+                <p>Comprehensive advisory for major financial transitions.</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Section 3 -->
+        <h2>3. Retirement Plan Consulting & Management (For Businesses)</h2>
+        <p>For employer plan sponsors, corporations, and professional practices (such as medical or dental offices) establishing or managing company-sponsored retirement plans like 401(k)s or profit-sharing structures, our annualized fees are based on a straight-tier asset schedule billed quarterly in arrears:</p>
+        
+        <table class="fee-table">
+            <tr>
+                <th>Plan Asset Tier</th>
+                <th>Annualized Fee</th>
+            </tr>
+            <tr>
+                <td>$0 – $1,000,000</td>
+                <td>1.00%</td>
+            </tr>
+            <tr>
+                <td>$1,000,001 – $5,000,000</td>
+                <td>0.80%</td>
+            </tr>
+            <tr>
+                <td>$5,000,000 and Above</td>
+                <td>0.70%</td>
+            </tr>
+        </table>
+        <p class="note">Note: This corporate fee structure does not include third-party administrator, recordkeeper, or custodian fees.</p>
+
+        <!-- Our Fiduciary Promise Box -->
+        <div class="promise-box">
+            <h2>Our Fiduciary Promise</h2>
+            <p>You will always know what you pay and why you pay it. All fees, terms, and service scopes are explicitly detailed in your Advisory Contract before any relationship begins.</p>
+        </div>
+    </main>
+
+    <!-- Footer Links & Disclosures -->
+    <footer>
+        <div class="footer-links">
+            <a href="https://adviserinfo.sec.gov/" target="_blank">IAPD</a>
+            <a href="https://adviserinfo.sec.gov/firm/summary/343914" target="_blank">Form ADV</a>
+            <a href="#">Privacy Notice</a>
+            <a href="#">Disclosures</a>
+        </div>
+        <div class="copyright">
+            © 2026 365Sundays Wealth LLC. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
