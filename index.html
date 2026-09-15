@@ -31,7 +31,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 40px;
+            padding: 15px 40px;
             border-bottom: 1px solid #eaeaea;
             background: var(--white);
             position: sticky;
@@ -42,27 +42,13 @@
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 15px;
             text-decoration: none;
         }
 
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .logo-title {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--primary-blue);
-            letter-spacing: 0.5px;
-        }
-
-        .logo-subtitle {
-            font-size: 10px;
-            color: var(--accent-gold);
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .logo-img {
+            height: 55px;
+            width: auto;
+            object-fit: contain;
         }
 
         nav {
@@ -138,9 +124,9 @@
             background-color: var(--white);
         }
 
-        /* Main Content Grid / Highlights */
+        /* Main Content Layout */
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 80px auto;
             padding: 0 20px;
         }
@@ -154,6 +140,8 @@
             font-size: 28px;
             color: var(--primary-blue);
             margin-bottom: 20px;
+            border-left: none;
+            padding-left: 0;
         }
 
         .intro-section p {
@@ -175,6 +163,7 @@
             background-color: var(--bg-light);
             padding: 35px 25px;
             border-radius: 6px;
+            border: 1px solid #E2E8F0;
             border-top: 3px solid var(--accent-gold);
         }
 
@@ -190,6 +179,54 @@
             margin-bottom: 0;
         }
 
+        h2 {
+            font-size: 28px;
+            color: var(--primary-blue);
+            margin-top: 60px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent-gold);
+            padding-left: 12px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 17px;
+            color: #4A5568;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #E2E8F0;
+            margin: 60px 0;
+        }
+
+        /* Founder Section Styling */
+        .founder-section {
+            background-color: var(--bg-light);
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            padding: 40px;
+            margin-top: 30px;
+        }
+
+        .founder-header {
+            margin-bottom: 20px;
+        }
+
+        .founder-header h3 {
+            font-size: 26px;
+            color: var(--primary-blue);
+        }
+
+        .founder-title {
+            font-size: 15px;
+            color: var(--accent-gold);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 5px;
+        }
+
         /* Footer */
         footer {
             background-color: var(--primary-blue);
@@ -197,6 +234,7 @@
             text-align: center;
             padding: 40px 20px;
             margin-top: 100px;
+            border-top: 2px solid var(--accent-gold);
         }
 
         .footer-links {
@@ -250,14 +288,10 @@
     <!-- Header & Navigation Bar -->
     <header>
         <a href="index.html" class="logo-container">
-            <div class="logo-text">
-                <span class="logo-title">365Sundays</span>
-                <span class="logo-subtitle">Wealth LLC</span>
-            </div>
+            <img src="365_Sundays_Wealth_Logo_Webpageembed.jpg" alt="365Sundays Wealth Logo" class="logo-img">
         </a>
         <nav>
             <a href="index.html" style="color: var(--accent-gold);">Home</a>
-            <a href="about.html">About</a>
             <a href="services.html">Our Services</a>
             <a href="whoweserve.html">Who We Serve</a>
             <a href="pricing.html">Pricing</a>
@@ -273,10 +307,11 @@
         <a href="consultation.html" class="hero-btn">Schedule a Conversation</a>
     </section>
 
-    <!-- Main Overview -->
+    <!-- Main Overview & Content -->
     <main class="container">
+        
         <div class="intro-section">
-            <h2>Institutional-Grade Guidance, Tailored Personally</h2>
+            <h2 style="border-left: none; padding-left: 0;">Institutional-Grade Guidance, Tailored Personally</h2>
             <p>At 365Sundays Wealth LLC, we believe that managing wealth should give you time back, not take it away. Grounded in fiduciary excellence and rigorous analytical strategy, we partner with clients across the United States to transform financial complexity into structured freedom.</p>
         </div>
 
@@ -294,6 +329,21 @@
                 <p>Our mission is to help you build a life of financial security—helping you create a reality where every day feels like a Sunday morning.</p>
             </div>
         </div>
+
+        <div class="divider"></div>
+
+        <!-- Appended About / Meet the Founder Section -->
+        <h2>Meet the Founder</h2>
+        <div class="founder-section">
+            <div class="founder-header">
+                <h3>Madhavi Kotturu</h3>
+                <div class="founder-title">Principal Wealth Advisor & Managing Member</div>
+            </div>
+            <p>With 15 years of deep experience across the financial industry—spanning wealth management, broker-dealer and clearing services, credit services, collateral management, and developing strategic operational solutions for RIAs—our founder Madhavi who is a Certified Financial Planner (CFP®) created 365Sundays Wealth to bring institutional-grade precision to private wealth management.</p>
+            <p>Bringing a well-rounded and deep analytical perspective, she possesses extensive knowledge across global fixed income, equity analysis, tax loss harvesting, real estate, and international investments. Believing that everyone deserves access to clear wealth-building knowledge, she translates complex financial mechanics into actionable, real-world strategies designed to help clients secure lasting financial freedom.</p>
+            <p style="margin-bottom: 0;">Client journeys from financial uncertainty to freedom is the blueprint behind everything we do. When she isn't helping clients, she loves cycling, tending to her garden, dancing, and spending quality time with her husband, two daughters, and a son.</p>
+        </div>
+
     </main>
 
     <!-- Footer Links & Disclosures -->
