@@ -23,7 +23,7 @@
         body {
             color: var(--text-dark);
             background-color: var(--white);
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         /* Navigation Header */
@@ -46,7 +46,7 @@
         }
 
         .logo-img {
-            height: 125px;
+            height: 75px;
             width: auto;
             object-fit: contain;
         }
@@ -127,17 +127,17 @@
         /* Main Content Layout */
         .container {
             max-width: 900px;
-            margin: 80px auto;
+            margin: 70px auto;
             padding: 0 20px;
         }
 
         .intro-section {
             text-align: center;
-            margin-bottom: 70px;
+            margin-bottom: 60px;
         }
 
         .intro-section h2 {
-            font-size: 28px;
+            font-size: 30px;
             color: var(--primary-blue);
             margin-bottom: 20px;
             border-left: none;
@@ -147,42 +147,73 @@
         .intro-section p {
             font-size: 18px;
             color: #4A5568;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.7;
+            max-width: 780px;
+            margin: 0 auto 15px auto;
         }
 
-        .pillars-grid {
+        /* Philosophy Callout Box */
+        .philosophy-box {
+            background-color: var(--bg-light);
+            border: 1px solid #E2E8F0;
+            border-left: 4px solid var(--accent-gold);
+            padding: 35px;
+            border-radius: 6px;
+            margin-bottom: 60px;
+        }
+
+        .philosophy-box h3 {
+            font-size: 22px;
+            color: var(--primary-blue);
+            margin-bottom: 12px;
+        }
+
+        .philosophy-box p {
+            font-size: 16px;
+            color: #4A5568;
+            margin-bottom: 12px;
+        }
+
+        .philosophy-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Grids */
+        .pillars-grid, .values-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 40px;
+            gap: 25px;
+            margin-top: 30px;
+            margin-bottom: 50px;
         }
 
-        .pillar-card {
+        .values-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .pillar-card, .value-card {
             background-color: var(--bg-light);
-            padding: 35px 25px;
+            padding: 30px 25px;
             border-radius: 6px;
             border: 1px solid #E2E8F0;
             border-top: 3px solid var(--accent-gold);
         }
 
-        .pillar-card h3 {
+        .pillar-card h3, .value-card h3 {
             font-size: 18px;
             color: var(--primary-blue);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
-        .pillar-card p {
+        .pillar-card p, .value-card p {
             font-size: 15px;
             color: #555;
             margin-bottom: 0;
         }
 
         h2 {
-            font-size: 28px;
+            font-size: 26px;
             color: var(--primary-blue);
-            margin-top: 60px;
+            margin-top: 50px;
             margin-bottom: 20px;
             border-left: 4px solid var(--accent-gold);
             padding-left: 12px;
@@ -197,7 +228,7 @@
         .divider {
             height: 1px;
             background-color: #E2E8F0;
-            margin: 60px 0;
+            margin: 50px 0;
         }
 
         /* Founder Section Styling */
@@ -233,7 +264,7 @@
             color: var(--white);
             text-align: center;
             padding: 40px 20px;
-            margin-top: 100px;
+            margin-top: 80px;
             border-top: 2px solid var(--accent-gold);
         }
 
@@ -264,7 +295,7 @@
         }
 
         @media (max-width: 768px) {
-            .pillars-grid {
+            .pillars-grid, .values-grid {
                 grid-template-columns: 1fr;
             }
             header {
@@ -307,14 +338,26 @@
         <a href="consultation.html" class="hero-btn">Schedule a Conversation</a>
     </section>
 
-    <!-- Main Overview & Content -->
+    <!-- Main Content -->
     <main class="container">
         
+        <!-- Brand Story Intro -->
         <div class="intro-section">
-            <h2 style="border-left: none; padding-left: 0;">Institutional-Grade Guidance, Tailored Personally</h2>
-            <p>At 365Sundays Wealth LLC, we believe that managing wealth should give you time back, not take it away. Grounded in fiduciary excellence and rigorous analytical strategy, we partner with clients across the United States to transform financial complexity into structured freedom.</p>
+            <h2>Building wealth so every day feels like Sunday</h2>
+            <p>365 Sundays Wealth was born from a simple but powerful idea: financial freedom should feel like waking up on a Sunday morning—no alarm, no rush, just the freedom to live life on your own terms.</p>
+            <p>Our mission is to equip everyday people with the knowledge, tools, and mindset to build lasting financial freedom.</p>
         </div>
 
+        <!-- Why 365 Sundays Philosophy -->
+        <div class="philosophy-box">
+            <h3>Why 365 Sundays?</h3>
+            <p>Think about how you feel on a Sunday morning. No obligations pulling at you. No alarm dragging you out of bed. Just the freedom to do what matters most—spend time with family, pursue a passion, or simply rest.</p>
+            <p>Now imagine feeling that way every single day of the year. That's the vision behind 365 Sundays Wealth. We're not just teaching people how to invest—we're teaching people how to design a life where financial stress is replaced by financial confidence.</p>
+            <p>True wealth is the ability to wake up each morning and choose how you spend your day. We're here to help you build that.</p>
+        </div>
+
+        <!-- Three Pillars Grid -->
+        <h2 style="border-left: none; padding-left: 0; text-align: center; margin-bottom: 10px;">Our Core Pillars</h2>
         <div class="pillars-grid">
             <div class="pillar-card">
                 <h3>Fiduciary Standard</h3>
@@ -332,7 +375,30 @@
 
         <div class="divider"></div>
 
-        <!-- Appended About / Meet the Founder Section -->
+        <!-- What We Stand For (Values Grid) -->
+        <h2>What We Stand For</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <h3>Holistic Financial Outlook</h3>
+                <p>Having the big picture of all the pieces put together helps build great financial decisions. Regardless of whether your portfolio is at one million or one hundred million, we take an integrated, holistic approach to wealth management that captures the big picture and directs your focus where it matters most.</p>
+            </div>
+            <div class="value-card">
+                <h3>Long-term Thinking</h3>
+                <p>Wealth is built over years, not overnight. We champion patience, consistency, and the power of compounding.</p>
+            </div>
+            <div class="value-card">
+                <h3>Community over Competition</h3>
+                <p>We rise together. Our community shares wins, lessons, and support—because financial freedom is better when shared.</p>
+            </div>
+            <div class="value-card">
+                <h3>Empowerment through Action</h3>
+                <p>Information without action is just entertainment. We push our community to take real steps toward their financial goals.</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Meet the Founder Section -->
         <h2>Meet the Founder</h2>
         <div class="founder-section">
             <div class="founder-header">
