@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
             --primary-blue: #0A192F;
             --accent-gold: #C5A059;
             --text-dark: #333333;
-            --bg-light: #F9FAFB;
+            --bg-light: #f5f4ef;
             --white: #FFFFFF;
         }
 
@@ -22,58 +22,38 @@
 
         body {
             color: var(--text-dark);
-            background-color: var(--white);
+            background-color: var(--bg-light);
             line-height: 1.6;
+            font-size: 16px;
         }
 
-        /* Navigation Header */
+        /* Navigation Header - Matches index.html */
         header {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            grid-template-rows: auto auto;
             align-items: center;
-            padding: 20px 40px;
-            border-bottom: 1px solid #eaeaea;
-            background: var(--white);
+            width: 100%;
+            box-sizing: border-box;
+            row-gap: 15px;
+            padding: 10px 40px;
+            border-bottom: 2px solid var(--accent-gold);
+            background-color: var(--primary-blue);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            text-decoration: none;
-        }
-
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .logo-title {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--primary-blue);
-            letter-spacing: 0.5px;
-        }
-
-        .logo-subtitle {
-            font-size: 10px;
-            color: var(--accent-gold);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
         nav {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 20px;
+            white-space: nowrap;
         }
 
         nav a {
             text-decoration: none;
-            color: var(--primary-blue);
+            color: var(--white);
             font-weight: 500;
             font-size: 15px;
             transition: color 0.2s;
@@ -84,18 +64,19 @@
         }
 
         .consultation-btn {
-            background-color: var(--primary-blue);
-            color: var(--white);
+            background-color: var(--accent-gold);
+            color: var(--primary-blue);
             padding: 10px 20px;
             border-radius: 4px;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 14px;
-            transition: background-color 0.2s;
+            transition: background-color 0.2s, color 0.2s;
         }
 
         .consultation-btn:hover {
-            background-color: var(--accent-gold);
+            background-color: var(--white);
+            color: var(--primary-blue);
         }
 
         /* Main Content Layout */
@@ -103,6 +84,7 @@
             max-width: 900px;
             margin: 60px auto;
             padding: 0 20px;
+            background-color: var(--bg-light);
         }
 
         h1 {
@@ -188,6 +170,7 @@
             padding: 20px;
             border-radius: 6px;
             border: 1px solid #E2E8F0;
+            border-left: 4px solid var(--primary-blue);
         }
 
         .specialty-item h4 {
@@ -204,26 +187,28 @@
 
         /* Promise Box */
         .promise-box {
-            background-color: var(--primary-blue);
-            color: var(--white);
+            background-color: var(--bg-light);
+            color: var(--text-dark);
             padding: 40px;
             border-radius: 8px;
             margin-top: 60px;
+            border: 1px solid #E2E8F0;
+            border-top: 4px solid var(--accent-gold);
         }
 
         .promise-box h2 {
-            color: var(--accent-gold);
+            color: var(--primary-blue);
             border-left: none;
             padding-left: 0;
             margin-top: 0;
         }
 
         .promise-box p {
-            color: #E2E8F0;
+            color: #4A5568;
             margin-bottom: 0;
         }
 
-        /* Footer */
+        /* Footer - Matches index.html */
         footer {
             background-color: var(--primary-blue);
             color: var(--white);
@@ -259,14 +244,14 @@
             opacity: 0.6;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 850px) {
             .specialty-list {
                 grid-template-columns: 1fr;
             }
             header {
                 padding: 15px 20px;
-                flex-direction: column;
-                gap: 15px;
+                grid-template-columns: 1fr;
+                text-align: center;
             }
             nav {
                 flex-wrap: wrap;
@@ -280,21 +265,31 @@
 
     <!-- Header & Navigation Bar -->
     <header>
-        <a href="index.html" class="logo-container">
-            <div class="logo-text">
-                <span class="logo-title">365Sundays</span>
-                <span class="logo-subtitle">Wealth LLC</span>
-            </div>
-        </a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Our Services</a>
-            <a href="whoweserve.html">Who We Serve</a>
-            <a href="pricing.html" style="color: var(--accent-gold);">Pricing</a>
-            <a href="clientlogin.html">Client Login</a>
-            <a href="consultation.html" class="consultation-btn">Private Wealth Consultation</a>
-        </nav>
+      <!-- Left Column: Logo -->
+      <div style="grid-column: 1; grid-row: 1 / span 2; justify-self: start; align-self: center; padding-right: 20px;">
+        <img src="logo.jpg" alt="365Sundays Wealth Logo" style="height: 110px; display: block;">
+      </div>
+
+      <!-- Center Column: Title -->
+      <div style="grid-column: 2; grid-row: 1; justify-self: center; text-align: center;">
+       <h1 style="margin: 0; color: var(--white); font-family: Baskerville, 'Baskerville Old Face', Garamond, Georgia, serif; font-size: 36px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; white-space: nowrap;">
+       365SUNDAYS WEALTH
+       </h1>
+      </div>
+
+      <!-- Right Column: Navigation Links -->
+      <nav style="grid-column: 3; grid-row: 1; justify-self: end;">
+        <a href="index.html">Home</a>
+        <a href="services.html">Our Services</a>
+        <a href="whoweserve.html">Who We Serve</a>
+        <a href="pricing.html" style="color: var(--accent-gold);">Pricing</a>
+        <a href="clientlogin.html">Client Login</a>
+      </nav>
+
+      <!-- Row 2: Private Wealth Consultation Button -->
+      <div style="grid-column: 2 / span 2; grid-row: 2; justify-self: end; text-align: right;">
+        <a href="consultation.html" class="consultation-btn" style="display: inline-block;">Private Wealth Consultation</a>
+      </div>
     </header>
 
     <!-- Main Content -->
@@ -424,13 +419,13 @@
         </div>
     </main>
 
-    <!-- Footer Links & Disclosures -->
+    <!-- Footer Links & Disclosures - Matches index.html -->
     <footer>
         <div class="footer-links">
             <a href="https://adviserinfo.sec.gov/" target="_blank">IAPD</a>
             <a href="https://adviserinfo.sec.gov/firm/summary/343914" target="_blank">Form ADV</a>
-            <a href="#">Privacy Notice</a>
-            <a href="#">Disclosures</a>
+            <a href="privacy_policy.html">Privacy Notice</a>
+            <a href="Disclosures.html">Disclosures</a>
         </div>
         <div class="copyright">
             © 2026 365Sundays Wealth LLC. All rights reserved.
