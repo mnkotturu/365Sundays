@@ -319,35 +319,42 @@
     </style>
 </head>
 <body>
- <!-- Header & Navigation Bar -->
-    <header>
-        <!-- ROW 1: Logo (Left), Title (Center), Navigation (Right) -->
-       <div style="display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; width: 100%;">
-       <!-- Left Column: Logo -->
-       <div style="justify-self: start;">
-       <img src="logo.jpg" alt="365Sundays Wealth Logo" style="height: 75px;">
-       </div>
-        <!-- Center Column: Title (Always centered) -->
-       <div style="justify-self: center;">
-         <h1 style="margin: 0; font-size: 34px; letter-spacing: 1px;">
-          365SUNDAYS WEALTH
-         </h1>
-        </div>
-        <!-- Right Column: Navigation Links -->
-        <nav style="justify-self: end; display: flex; gap: 20px;">
-            <a href="index.html" style="color: var(--accent-gold);">Home</a>
-            <a href="services.html">Our Services</a>
-            <a href="whoweserve.html">Who We Serve</a>
-            <a href="pricing.html">Pricing</a>
-            <a href="clientlogin.html">Client Login</a>
-         </nav>
-        </div>
-        <!-- ROW 2: Private Wealth Consultation Button (Right-aligned below) -->
-      <div style="width: 100%; text-align: right; margin-top: 15px;">
-        <a href="consultation.html" class="consultation-btn">Private Wealth Consultation</a>
-      </div>
-          <!--   <a href="consultation.html" class="consultation-btn">Private Wealth Consultation</a> -->
-         </header>
+ 
+  <!-- Header & Navigation Bar -->
+<header style="display: block; width: 100%;">
+
+  <!-- ROW 1: Logo (Left), Title (Center), Navigation (Right) -->
+  <div style="display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; width: 100%; box-sizing: border-box;">
+    
+    <!-- Left Column: Logo -->
+    <div style="justify-self: start;">
+      <img src="logo.jpg" alt="365Sundays Wealth Logo" style="height: 75px;">
+    </div>
+
+    <!-- Center Column: Title (Always centered) -->
+    <div style="justify-self: center; text-align: center;">
+      <h1 style="margin: 0; font-size: 34px; letter-spacing: 1px; white-space: nowrap;">
+        365SUNDAYS WEALTH
+      </h1>
+    </div>
+
+    <!-- Right Column: Navigation Links -->
+    <nav style="justify-self: end; display: flex; gap: 20px; white-space: nowrap;">
+      <a href="index.html" style="color: var(--accent-gold);">Home</a>
+      <a href="services.html">Our Services</a>
+      <a href="whoweserve.html">Who We Serve</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="clientlogin.html">Client Login</a>
+    </nav>
+
+  </div> <!-- End Row 1 -->
+
+  <!-- ROW 2: Private Wealth Consultation Button (Right-aligned below) -->
+  <div style="display: block; width: 100%; text-align: right; margin-top: 15px; box-sizing: border-box;">
+    <a href="consultation.html" class="consultation-btn" style="display: inline-block;">Private Wealth Consultation</a>
+  </div>
+
+</header>
 
     <!-- Main Content -->
     <main class="container">
