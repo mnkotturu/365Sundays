@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>365Sundays Wealth LLC | Independent Fee-Based RIA</title>
+    <style>
+        :root {
+            --primary-blue: #0A192F;
+            --accent-gold: #C5A059;
+            --text-dark: #333333;
+            --bg-light: #F9FAFB;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            color: var(--text-dark);
+            background-color: var(--white);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        /* Navigation Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            border-bottom: 2px solid #1E293B;
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 75px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-blue);
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        .consultation-btn {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+
+        .consultation-btn:hover {
+            background-color: var(--accent-gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            font-weight: 400;
+            max-width: 800px;
+            margin: 0 auto 15px auto;
+            color: var(--primary-blue);
+            letter-spacing: -0.5px;
+            line-height: 1.25;
+        }
+
+        .hero p {
+            color: #4A5568;
+            font-size: 1.1rem;
+            max-width: 720px;
+            margin: 0 auto 10px auto;
+            line-height: 1.6;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: var(--accent-gold);
+            color: var(--primary-blue);
+            padding: 14px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background-color 0.2s;
+        }
+
+        .hero-btn:hover {
+            background-color: var(--white);
+        }
+
+        /* Main Content Layout */
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .intro-section {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .intro-section h2 {
+            font-size: 30px;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            border-left: none;
+            padding-left: 0;
+        }
+
+        .intro-section p {
+            font-size: 17px;
+            color: #4A5568;
+            max-width: 780px;
+            margin: 0 auto 15px auto;
+        }
+
+        /* Philosophy Callout Box */
+        .philosophy-box {
+            background-color: var(--bg-light);
+            border: 1px solid #E2E8F0;
+            border-left: 4px solid var(--accent-gold);
+            padding: 35px;
+            border-radius: 6px;
+            margin-bottom: 60px;
+        }
+
+        .philosophy-box h3 {
+            font-size: 22px;
+            color: var(--primary-blue);
+            margin-bottom: 12px;
+        }
+
+        .philosophy-box p {
+            font-size: 16px;
+            color: #4A5568;
+            margin-bottom: 12px;
+        }
+
+        .philosophy-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Grids */
+        .pillars-grid, .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+
+        .values-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .pillar-card, .value-card {
+            background-color: var(--bg-light);
+            padding: 30px 25px;
+            border-radius: 6px;
+            border: 1px solid #E2E8F0;
+            border-top: 3px solid var(--accent-gold);
+        }
+
+        .pillar-card h3, .value-card h3 {
+            font-size: 18px;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .pillar-card p, .value-card p {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 26px;
+            color: var(--primary-blue);
+            margin-top: 50px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent-gold);
+            padding-left: 12px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #4A5568;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #E2E8F0;
+            margin: 50px 0;
+        }
+
+        /* Founder Section Styling */
+        .founder-section {
+            background-color: var(--bg-light);
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            padding: 40px;
+            margin-top: 30px;
+        }
+
+        .founder-header {
+            margin-bottom: 20px;
+        }
+
+        .founder-header h3 {
+            font-size: 26px;
+            color: var(--primary-blue);
+        }
+
+        .founder-title {
+            font-size: 15px;
+            color: var(--accent-gold);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 80px;
+            border-top: 2px solid var(--accent-gold);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 14px;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--accent-gold);
+        }
+
+        .copyright {
+            font-size: 13px;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 768px) {
+            .pillars-grid, .values-grid {
+                grid-template-columns: 1fr;
+            }
+            header {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation Bar -->
+    <header>
+        <a href="index.html" class="logo-container">
+            <img src="logo.jpg" alt="365Sundays Wealth Logo" class="logo-img">
+        </a>
+        <nav>
+            <a href="index.html" style="color: var(--accent-gold);">Home</a>
+            <a href="services.html">Our Services</a>
+            <a href="whoweserve.html">Who We Serve</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="clientlogin.html">Client Login</a>
+            <a href="consultation.html" class="consultation-btn">Private Wealth Consultation</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- Brand Story Intro -->
+        <div class="intro-section">
+            <h2>Building wealth so every day feels like Sunday</h2>
+            <p>365 Sundays Wealth was born from a simple but powerful idea: financial freedom should feel like waking up on a Sunday morning—no alarm, no rush, just the freedom to live life on your own terms.Our mission is to equip everyday people with the knowledge, tools, and mindset to build lasting financial freedom. Independent, fee-based fiduciary wealth management designed to bring clarity and purpose to your life. Institutional grade guidance, tailored personally. </p>
+        </div>
+
+        <!-- Why 365 Sundays Philosophy -->
+        <div class="philosophy-box">
+            <h3>Why 365 Sundays?</h3>
+            <p>Think about how you feel on a Sunday morning. No obligations pulling at you. No alarm dragging you out of bed. Just the freedom to do what matters most—spend time with family, pursue a passion, or simply rest.</p>
+            <p>Now imagine feeling that way every single day of the year. That's the vision behind 365 Sundays Wealth. We're not just teaching people how to invest—we're teaching people how to design a life where financial stress is replaced by financial confidence.</p>
+            <p>True wealth is the ability to wake up each morning and choose how you spend your day. We're here to help you build that.</p>
+        </div>
+
+      
+        <!-- Three Pillars Grid -->
+        <h2 style="border-left: none; padding-left: 0; text-align: center; margin-bottom: 10px;">Our Core Pillars</h2>
+        <div class="pillars-grid">
+
+            <div class="pillar-card">
+                <h3>Holistic Financial Planning</h3>
+                <p>From disciplined portfolio management and tax positioning to estate alignment and equity compensation, every dimension is coordinated. Whether your portfolio is at one million or one hundred million, our holistic approach captures the full scope—directing your focus where it matters most.</p>
+            </div>
+            <div class="pillar-card">
+                <h3>Financial Confidence</h3>
+                <p>We want to build absolute confidence in your financial future through disciplined planning and proactive guidance. By removing the guesswork from wealth management, we give you the security to face tomorrow knowing you are fully prepared.</p>
+            </div>
+            <div class="pillar-card">
+                <h3>Intentional Living</h3>
+                <p>Our mission is to help you build a life of financial security—helping you create a reality where every day feels like a Sunday morning. Wealth should give you time back, not take it away.</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- What We Stand For (Values Grid) -->
+        <h2>What We Stand For</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <h3>Fiduciary Standard</h3>
+                <p>We are bound strictly by your best interests, offering transparent, objective guidance free from product commissions or conflicts of interest.</p>
+            </div>
+            <div class="value-card">
+                <h3>Clarity over Complexity</h3>
+                <p>Cutting through the noise of financial markets to deliver straightforward, transparent guidance that makes decision-making effortless.</p>
+            </div>
+            
+            <div class="value-card">
+                <h3>Long-term Thinking</h3>
+                <p>Wealth is built over years, not overnight. We champion patience, consistency, and the power of compounding.</p>
+            </div>
+            <div class="value-card">
+                <h3>Community over Competition</h3>
+                <p>We rise together. Our community shares wins, lessons, and support—because financial freedom is better when shared.</p>
+            </div>
+            <div class="value-card">
+                <h3>Empowerment through Action</h3>
+                <p>Information without action is just entertainment. We push our community to take real steps toward their financial goals.</p>
+            </div>
+            <div class="value-card">
+                <h3>Continuous Care</h3>
+                <p>Actively monitoring your path so nothing catches you off guard. We keep your strategy updated and aligned as your life and priorities evolve.</p>
+            </div>             
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Meet the Founder Section -->
+        <h2>Meet the Founder</h2>
+        <div class="founder-section">
+            <div class="founder-header">
+                <h3>Madhavi Kotturu</h3>
+                <div class="founder-title">Principal Wealth Advisor & Managing Member</div>
+            </div>
+            <p>With 15 years of deep experience across the financial industry—spanning wealth management, broker-dealer and clearing services, credit services, collateral management, and developing strategic operational solutions for RIAs—our founder Madhavi who is a Certified Financial Planner (CFP®) created 365Sundays Wealth to bring institutional-grade precision to private wealth management.</p>
+            <p>Bringing a well-rounded and deep analytical perspective, she possesses extensive knowledge across global fixed income, equity analysis, tax loss harvesting, real estate, and international investments. Believing that everyone deserves access to clear wealth-building knowledge, she translates complex financial mechanics into actionable, real-world strategies designed to help clients secure lasting financial freedom.</p>
+            <p style="margin-bottom: 0;">Client journeys from financial uncertainty to freedom is the blueprint behind everything we do. When she isn't helping clients, she loves cycling, tending to her garden, dancing, and spending quality time with her husband, son and two daughters.</p>
+        </div>
+
+    </main>
+
+    <!-- Footer Links & Disclosures -->
+    <footer>
+        <div class="footer-links">
+            <a href="https://adviserinfo.sec.gov/" target="_blank">IAPD</a>
+            <a href="https://adviserinfo.sec.gov/firm/summary/343914" target="_blank">Form ADV</a>
+            <a href="#">Privacy Notice</a>
+            <a href="#">Disclosures</a>
+        </div>
+        <div class="copyright">
+            © 2026 365Sundays Wealth LLC. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
