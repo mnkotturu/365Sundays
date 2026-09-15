@@ -10,7 +10,8 @@
             --primary-blue: #1E293B;
             --accent-gold: #c5a059;
             --white: #ffffff;
-            --bg-light: #f8fafc;
+            --bg-light: #f5f4ef; /* Soft off-white matching the screenshot */
+            --border-color: #333333;
         }
 
         body {
@@ -18,50 +19,31 @@
             padding: 0;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             color: #2d3748;
-            background-color: var(--white);
+            background-color: var(--bg-light);
         }
 
         /* Navigation Header */
         header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 40px;
-            border-bottom: 2px solid #1E293B;
             background: var(--white);
+            border-bottom: 2px solid var(--primary-blue);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
-         
-        .logo-container {
-            display: flex;
-            align-items: center;
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-navy);
+            color: var(--white);
+            padding: 10px 20px;
             text-decoration: none;
-        }
-
-        .logo-img {
-            height: 75px;
-            width: auto;
-            object-fit: contain;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--primary-blue);
+            border-radius: 2px;
             font-weight: 500;
-            font-size: 15px;
-            transition: color 0.2s;
+            transition: background-color 0.3s ease;
         }
 
-        nav a:hover {
-            color: var(--accent-gold);
+        .btn:hover {
+            background-color: #162b4d;
         }
 
         /* Hero Section */
@@ -69,7 +51,7 @@
             background-color: var(--primary-navy);
             color: var(--white);
             text-align: center;
-            padding: 80px 20px;
+            padding: 60px 20px;
         }
 
         .hero h1 {
@@ -87,91 +69,80 @@
             line-height: 1.7;
         }
 
-        /* Main Content */
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 80px 20px;
-        }
-
         .intro-text {
             text-align: center;
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             color: #444;
-            max-width: 800px;
-            margin: 0 auto 60px auto;
+            max-width: 900px;
+            margin: 40px auto 20px auto;
+            padding: 0 20px;
             line-height: 1.8;
         }
 
-        /* Service Categories */
-        .service-category {
-            margin-bottom: 50px;
-            border-bottom: 1px solid #eaeaea;
-            padding-bottom: 40px;
-        }
-
-        .service-category:last-child {
-            border-bottom: none;
-        }
-
-        .service-category h2 {
-            color: var(--primary-navy);
-            font-size: 1.4rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            border-left: 3px solid var(--accent-gold);
-            padding-left: 12px;
-        }
-
-        .service-item {
-            margin-bottom: 20px;
-        }
-
-        .service-item h3 {
-            font-size: 1.05rem;
-            color: var(--primary-navy);
-            margin: 0 0 5px 0;
-            font-weight: 600;
-        }
-
-        .service-item p {
-            color: #555;
-            margin: 0;
-            font-size: 0.98rem;
-        }
-
-        /* Call to Action Banner */
-        .cta-section {
+        /* Screenshot Grid Layout */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            border-left: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            max-width: 1200px;
+            margin: 40px auto;
             background-color: var(--bg-light);
-            text-align: center;
-            padding: 60px 20px;
-            border-top: 1px solid #eaeaea;
-            margin-top: 40px;
         }
 
-        .cta-section h3 {
+        .grid-column {
+            padding: 40px 35px;
+            box-sizing: border-box;
+        }
+
+        .grid-column:not(:last-child) {
+            border-right: 1px solid var(--border-color);
+        }
+
+        .service-block {
+            margin-bottom: 45px;
+        }
+
+        .service-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .service-block h2 {
+            font-size: 0.95rem;
+            font-weight: 700;
             color: var(--primary-navy);
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin: 0 0 15px 0;
         }
 
-        .btn {
-            display: inline-block;
-            background-color: var(--primary-navy);
-            color: var(--white);
-            padding: 12px 30px;
+        .service-block h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+            margin: 15px 0 8px 0;
+        }
+
+        .service-block p {
+            font-size: 0.92rem;
+            line-height: 1.6;
+            color: #2c3e50;
+            margin: 0 0 12px 0;
+        }
+
+        .gold-link {
+            color: var(--accent-gold);
             text-decoration: none;
-            border-radius: 2px;
+            font-size: 0.92rem;
             font-weight: 500;
-            margin-top: 20px;
-            transition: background-color 0.3s ease;
+            display: inline-block;
+            margin-top: 15px;
         }
 
-        .btn:hover {
-            background-color: #162b4d;
+        .gold-link:hover {
+            text-decoration: underline;
         }
 
         /* Footer Styling */
@@ -179,7 +150,7 @@
             background-color: var(--bg-light);
             text-align: center;
             padding: 30px 20px;
-            border-top: 1px solid #eaeaea;
+            border-top: 1px solid #d3d3d3;
             font-size: 0.9rem;
             color: #555;
         }
@@ -199,12 +170,23 @@
         .footer-links a:hover {
             text-decoration: underline;
         }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 900px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+            .grid-column:not(:last-child) {
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+            }
+        }
     </style>
 </head>
 <body>
 
    <!-- Header & Navigation Bar -->
-   <header style="display: grid; grid-template-columns: auto 1fr auto; grid-template-rows: auto auto; align-items: center; width: 100%; box-sizing: border-box; row-gap: 15px;">
+   <header style="display: grid; grid-template-columns: auto 1fr auto; grid-template-rows: auto auto; align-items: center; width: 100%; box-sizing: border-box; row-gap: 15px; padding: 10px 40px;">
   
       <!-- Left Column: Logo -->
       <div style="grid-column: 1; grid-row: 1 / span 2; justify-self: start; align-self: center; padding-right: 20px;">
@@ -220,16 +202,16 @@
 
       <!-- Right Column: Navigation Links -->
       <nav style="grid-column: 3; grid-row: 1; justify-self: end; display: flex; gap: 20px; white-space: nowrap;">
-        <a href="index.html">Home</a>
-        <a href="services.html" style="color: var(--accent-gold);">Our Services</a>
-        <a href="whoweserve.html">Who We Serve</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="clientlogin.html">Client Login</a>
+        <a href="index.html" style="text-decoration: none; color: var(--primary-blue);">Home</a>
+        <a href="services.html" style="text-decoration: none; color: var(--accent-gold); font-weight: 600;">Our Services</a>
+        <a href="whoweserve.html" style="text-decoration: none; color: var(--primary-blue);">Who We Serve</a>
+        <a href="pricing.html" style="text-decoration: none; color: var(--primary-blue);">Pricing</a>
+        <a href="clientlogin.html" style="text-decoration: none; color: var(--primary-blue);">Client Login</a>
       </nav>
 
       <!-- Row 2: Private Wealth Consultation Button -->
       <div style="grid-column: 2 / span 2; grid-row: 2; justify-self: end; text-align: right;">
-        <a href="consultation.html" class="btn" style="display: inline-block; margin-top: 0;">Private Wealth Consultation</a>
+        <a href="consultation.html" class="btn">Private Wealth Consultation</a>
       </div>
 
    </header>
@@ -240,124 +222,78 @@
         <p>Providing comprehensive wealth management and advisory services to clients across the United States.</p>
     </section>
 
-    <!-- Main Services Content -->
-    <div class="container">
-        <p class="intro-text">
-            At 365Sundays Wealth LLC, we provide integrated, fiduciary guidance designed to address every dimension of your financial life. Whether you engage us for ongoing wealth management or targeted strategic planning, our solutions are tailored entirely to your goals.
-        </p>
+    <!-- Intro Text -->
+    <p class="intro-text">
+        At 365Sundays Wealth LLC, we provide integrated, fiduciary guidance designed to address every dimension of your financial life. Whether you engage us for ongoing wealth management or targeted strategic planning, our solutions are tailored entirely to your goals.
+    </p>
 
-        <!-- Category 1 -->
-        <div class="service-category">
-            <h2>Portfolio Management</h2>
-            <div class="service-item">
-                <h3>Disciplined Asset Allocation</h3>
-                <p>We design and implement custom portfolios grounded in Modern Portfolio Theory, aligning your investments precisely with your risk tolerance and long-term time horizon.</p>
+    <!-- 3-Column Screenshot Grid -->
+    <div class="grid-container">
+
+        <!-- Column 1 -->
+        <div class="grid-column">
+            
+            <div class="service-block">
+                <h2>Portfolio Management</h2>
+                <p>+ We design and implement custom portfolios grounded in Modern Portfolio Theory, aligning your investments precisely with your risk tolerance and long-term time horizon. Portfolios are systematically overseen and rebalanced to maintain your target risk profile across changing market cycles.</p>
             </div>
-            <div class="service-item">
-                <h3>Continuous Monitoring & Rebalancing</h3>
-                <p>Portfolios are systematically overseen and rebalanced to maintain your target risk profile across changing market cycles.</p>
+
+            <div class="service-block">
+                <h2>Retirement Planning</h2>
+                <p>+ We help portfolio savers and spenders determine a sustainable level of spending and stay close to it when not earning a salary. We also provide guidance on the order of saving and spending based on the various account types available to optimize your cash flow.</p>
             </div>
+
+            <div class="service-block">
+                <h2>Tax & Estate Planning</h2>
+                <p>+ Being familiar with all your assets allows us to identify opportunities that may reduce income and estate taxes. We provide comprehensive reviews of your legacy framework, coordinating with estate attorneys, and managing concentrated equity compensation (ISOs, NSOs, RSUs, ESPPs).</p>
+            </div>
+
         </div>
 
-        <!-- Category 2 -->
-        <div class="service-category">
-            <h2>Retirement Planning</h2>
-            <div class="service-item">
-                <h3>Sustainable Withdrawal Strategies</h3>
-                <p>We help portfolio savers and spenders determine a sustainable level of spending and stay close to it when not earning a salary.</p>
+        <!-- Column 2 -->
+        <div class="grid-column">
+
+            <div class="service-block">
+                <h2>Education Planning</h2>
+                <p>+ We help parents and grandparents develop and implement a plan for college expenses using strategic, tax-advantaged vehicles like 529 plans.</p>
             </div>
-            <div class="service-item">
-                <h3>Account Sequencing</h3>
-                <p>We provide guidance on the order of saving and spending based on the various account types available to optimize your cash flow.</p>
+
+            <div class="service-block">
+                <h2>Charitable Planning</h2>
+                <p>+ Many of our clients have been successful and enjoy making the world a better place through giving. We help you maximize gifts while minimizing taxes and administrative burdens.</p>
             </div>
+
+            <div class="service-block">
+                <h2>Business Owners</h2>
+                <p>+ Business owners are faced with many unique challenges and opportunities. We help these leaders see and execute unique opportunities, including start-up, growth, succession, retirement plans (401k), and the eventual sale of their business.</p>
+            </div>
+
+            <div class="service-block">
+                <h2>Risk Management</h2>
+                <p>+ We seek to understand your insurance stack to ensure adequate life insurance coverage as well as inspect for gaps in property, casualty, and liability insurance coverage.</p>
+            </div>
+
         </div>
 
-        <!-- Category 3 -->
-        <div class="service-category">
-            <h2>Tax & Estate Planning</h2>
-            <div class="service-item">
-                <h3>Tax-Efficient Positioning</h3>
-                <p>Being familiar with all your assets allows us to identify opportunities that may reduce income and estate taxes.</p>
-            </div>
-            <div class="service-item">
-                <h3>Estate Plan Alignment</h3>
-                <p>Comprehensive reviews of your legacy framework, coordinating seamlessly with your estate attorneys to ensure proper trust and will implementation.</p>
-            </div>
-            <div class="service-item">
-                <h3>Concentrated Stock & Equity Compensation</h3>
-                <p>Sophisticated risk mitigation, equity compensation planning (ISOs, NSOs, RSUs, ESPPs), and single-stock management.</p>
-            </div>
-        </div>
+        <!-- Column 3 -->
+        <div class="grid-column">
 
-        <!-- Category 4 -->
-        <div class="service-category">
-            <h2>Education Planning</h2>
-            <div class="service-item">
-                <h3>Targeted Funding</h3>
-                <p>We help parents and grandparents develop and implement a plan for college expenses.</p>
+            <div class="service-block">
+                <h2>Specialty Services</h2>
+                <h3>Personal CFO</h3>
+                <p>+ For clients who have reached the pinnacle of their professional journey and accumulated an intricate web of personal responsibilities, we step in to streamline your day-to-day duties and lay the groundwork for smooth, organized succession.</p>
             </div>
-            <div class="service-item">
-                <h3>Tax-Advantaged Vehicles</h3>
-                <p>Strategic selection of accounts like 529 plans to support children's and grandchildren's post-secondary goals.</p>
-            </div>
-        </div>
 
-        <!-- Category 5 -->
-        <div class="service-category">
-            <h2>Charitable Planning</h2>
-            <div class="service-item">
-                <h3>Philanthropic Strategies</h3>
-                <p>Many of our clients have been successful and enjoy making the world a better place through giving.</p>
+            <div class="service-block">
+                <h2>Partnership and Estate Management</h2>
+                <p>+ We assist family members in navigating both the immediate and long-range duties required for Family Limited Partnerships and complex estate structures.</p>
             </div>
-            <div class="service-item">
-                <h3>Tax Optimization</h3>
-                <p>We help you maximize gifts while minimizing taxes and administrative burdens.</p>
-            </div>
-        </div>
 
-        <!-- Category 6 -->
-        <div class="service-category">
-            <h2>Business Owners</h2>
-            <div class="service-item">
-                <h3>Practice & Corporate Advisory</h3>
-                <p>Business owners are faced with many unique challenges and opportunities. We help these leaders see and execute unique opportunities, including start-up, growth, and the eventual sale of their business.</p>
-            </div>
-            <div class="service-item">
-                <h3>Retirement Plan Consulting & Management</h3>
-                <p>Establishing, reviewing, and providing fiduciary oversight for corporate retirement structures such as 401(k) and profit-sharing plans for professional practices and small businesses.</p>
-            </div>
-        </div>
+            <a href="consultation.html" class="gold-link">Learn More about Specialty Services &rarr;</a>
 
-        <!-- Category 7 -->
-        <div class="service-category">
-            <h2>Risk Management</h2>
-            <div class="service-item">
-                <h3>Insurance Stack Analysis</h3>
-                <p>We seek to understand your insurance stack to ensure adequate life insurance coverage as well as inspect for gaps in property, casualty, and liability insurance coverage.</p>
-            </div>
-        </div>
-
-        <!-- Category 8 -->
-        <div class="service-category">
-            <h2>Specialty Services</h2>
-            <div class="service-item">
-                <h3>Executive & Career Succession Support</h3>
-                <p>For clients who have reached the pinnacle of their professional journey and accumulated an intricate web of personal responsibilities, we step in to streamline your day-to-day duties and lay the groundwork for smooth, organized succession.</p>
-            </div>
-            <div class="service-item">
-                <h3>Estate & Partnership Obligations</h3>
-                <p>We assist family members in navigating both the immediate and long-range duties required for Family Limited Partnerships and complex estate structures.</p>
-            </div>
         </div>
 
     </div>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <h3>Ready to map out your financial future?</h3>
-        <p>Let's discuss an approach tailored precisely to your objectives.</p>
-        <a href="mailto:mkotturu@365sundayswealth.com" class="btn">Contact Us</a>
-    </section>
 
     <!-- Footer -->
     <footer>
