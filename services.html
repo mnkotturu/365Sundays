@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -101,15 +101,15 @@
             border-right: 1px solid var(--border-color);
         }
 
-        .service-block {
-            margin-bottom: 45px;
+        .service-category {
+            margin-bottom: 40px;
         }
 
-        .service-block:last-child {
+        .service-category:last-child {
             margin-bottom: 0;
         }
 
-        .service-block h2 {
+        .service-category h2 {
             font-size: 0.95rem;
             font-weight: 700;
             color: var(--primary-navy);
@@ -118,18 +118,22 @@
             margin: 0 0 15px 0;
         }
 
-        .service-block h3 {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--primary-navy);
-            margin: 15px 0 8px 0;
+        .service-item {
+            margin-bottom: 16px;
         }
 
-        .service-block p {
+        .service-item h3 {
             font-size: 0.92rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+            margin: 0 0 4px 0;
+        }
+
+        .service-item p {
+            font-size: 0.90rem;
             line-height: 1.6;
             color: #2c3e50;
-            margin: 0 0 12px 0;
+            margin: 0;
         }
 
         .gold-link {
@@ -138,7 +142,7 @@
             font-size: 0.92rem;
             font-weight: 500;
             display: inline-block;
-            margin-top: 15px;
+            margin-top: 20px;
         }
 
         .gold-link:hover {
@@ -227,25 +231,53 @@
         At 365Sundays Wealth LLC, we provide integrated, fiduciary guidance designed to address every dimension of your financial life. Whether you engage us for ongoing wealth management or targeted strategic planning, our solutions are tailored entirely to your goals.
     </p>
 
-    <!-- 3-Column Screenshot Grid -->
+    <!-- 3-Column Grid Container -->
     <div class="grid-container">
 
         <!-- Column 1 -->
         <div class="grid-column">
             
-            <div class="service-block">
-                <h2>Portfolio Management</h2>
-                <p>+ We design and implement custom portfolios grounded in Modern Portfolio Theory, aligning your investments precisely with your risk tolerance and long-term time horizon. Portfolios are systematically overseen and rebalanced to maintain your target risk profile across changing market cycles.</p>
+            <!-- Portfolio Management -->
+            <div class="service-category">
+                <h2>PORTFOLIO MANAGEMENT</h2>
+                <div class="service-item">
+                    <h3>Disciplined Asset Allocation</h3>
+                    <p>+ We design and implement custom portfolios grounded in Modern Portfolio Theory, aligning your investments precisely with your risk tolerance and long-term time horizon.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Continuous Monitoring & Rebalancing</h3>
+                    <p>+ Portfolios are systematically overseen and rebalanced to maintain your target risk profile across changing market cycles.</p>
+                </div>
             </div>
 
-            <div class="service-block">
-                <h2>Retirement Planning</h2>
-                <p>+ We help portfolio savers and spenders determine a sustainable level of spending and stay close to it when not earning a salary. We also provide guidance on the order of saving and spending based on the various account types available to optimize your cash flow.</p>
+            <!-- Retirement Planning -->
+            <div class="service-category">
+                <h2>RETIREMENT PLANNING</h2>
+                <div class="service-item">
+                    <h3>Sustainable Withdrawal Strategies</h3>
+                    <p>+ We help portfolio savers and spenders determine a sustainable level of spending and stay close to it when not earning a salary.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Account Sequencing</h3>
+                    <p>+ We provide guidance on the order of saving and spending based on the various account types available to optimize your cash flow.</p>
+                </div>
             </div>
 
-            <div class="service-block">
-                <h2>Tax & Estate Planning</h2>
-                <p>+ Being familiar with all your assets allows us to identify opportunities that may reduce income and estate taxes. We provide comprehensive reviews of your legacy framework, coordinating with estate attorneys, and managing concentrated equity compensation (ISOs, NSOs, RSUs, ESPPs).</p>
+            <!-- Tax & Estate Planning -->
+            <div class="service-category">
+                <h2>TAX & ESTATE PLANNING</h2>
+                <div class="service-item">
+                    <h3>Tax-Efficient Positioning</h3>
+                    <p>+ Being familiar with all your assets allows us to identify opportunities that may reduce income and estate taxes.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Estate Plan Alignment</h3>
+                    <p>+ Comprehensive reviews of your legacy framework, coordinating seamlessly with your estate attorneys to ensure proper trust and will implementation.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Concentrated Stock & Equity Compensation</h3>
+                    <p>+ Sophisticated risk mitigation, equity compensation planning (ISOs, NSOs, RSUs, ESPPs), and single-stock management.</p>
+                </div>
             </div>
 
         </div>
@@ -253,24 +285,52 @@
         <!-- Column 2 -->
         <div class="grid-column">
 
-            <div class="service-block">
-                <h2>Education Planning</h2>
-                <p>+ We help parents and grandparents develop and implement a plan for college expenses using strategic, tax-advantaged vehicles like 529 plans.</p>
+            <!-- Education Planning -->
+            <div class="service-category">
+                <h2>EDUCATION PLANNING</h2>
+                <div class="service-item">
+                    <h3>Targeted Funding</h3>
+                    <p>+ We help parents and grandparents develop and implement a plan for college expenses.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Tax-Advantaged Vehicles</h3>
+                    <p>+ Strategic selection of accounts like 529 plans to support children's and grandchildren's post-secondary goals.</p>
+                </div>
             </div>
 
-            <div class="service-block">
-                <h2>Charitable Planning</h2>
-                <p>+ Many of our clients have been successful and enjoy making the world a better place through giving. We help you maximize gifts while minimizing taxes and administrative burdens.</p>
+            <!-- Charitable Planning -->
+            <div class="service-category">
+                <h2>CHARITABLE PLANNING</h2>
+                <div class="service-item">
+                    <h3>Philanthropic Strategies</h3>
+                    <p>+ Many of our clients have been successful and enjoy making the world a better place through giving.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Tax Optimization</h3>
+                    <p>+ We help you maximize gifts while minimizing taxes and administrative burdens.</p>
+                </div>
             </div>
 
-            <div class="service-block">
-                <h2>Business Owners</h2>
-                <p>+ Business owners are faced with many unique challenges and opportunities. We help these leaders see and execute unique opportunities, including start-up, growth, succession, retirement plans (401k), and the eventual sale of their business.</p>
+            <!-- Business Owners -->
+            <div class="service-category">
+                <h2>BUSINESS OWNERS</h2>
+                <div class="service-item">
+                    <h3>Practice & Corporate Advisory</h3>
+                    <p>+ Business owners are faced with many unique challenges and opportunities. We help these leaders see and execute unique opportunities, including start-up, growth, and the eventual sale of their business.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Retirement Plan Consulting & Management</h3>
+                    <p>+ Establishing, reviewing, and providing fiduciary oversight for corporate retirement structures such as 401(k) and profit-sharing plans for professional practices and small businesses.</p>
+                </div>
             </div>
 
-            <div class="service-block">
-                <h2>Risk Management</h2>
-                <p>+ We seek to understand your insurance stack to ensure adequate life insurance coverage as well as inspect for gaps in property, casualty, and liability insurance coverage.</p>
+            <!-- Risk Management -->
+            <div class="service-category">
+                <h2>RISK MANAGEMENT</h2>
+                <div class="service-item">
+                    <h3>Insurance Stack Analysis</h3>
+                    <p>+ We seek to understand your insurance stack to ensure adequate life insurance coverage as well as inspect for gaps in property, casualty, and liability insurance coverage.</p>
+                </div>
             </div>
 
         </div>
@@ -278,15 +338,17 @@
         <!-- Column 3 -->
         <div class="grid-column">
 
-            <div class="service-block">
-                <h2>Specialty Services</h2>
-                <h3>Personal CFO</h3>
-                <p>+ For clients who have reached the pinnacle of their professional journey and accumulated an intricate web of personal responsibilities, we step in to streamline your day-to-day duties and lay the groundwork for smooth, organized succession.</p>
-            </div>
-
-            <div class="service-block">
-                <h2>Partnership and Estate Management</h2>
-                <p>+ We assist family members in navigating both the immediate and long-range duties required for Family Limited Partnerships and complex estate structures.</p>
+            <!-- Specialty Services -->
+            <div class="service-category">
+                <h2>SPECIALTY SERVICES</h2>
+                <div class="service-item">
+                    <h3>Executive & Career Succession Support</h3>
+                    <p>+ For clients who have reached the pinnacle of their professional journey and accumulated an intricate web of personal responsibilities, we step in to streamline your day-to-day duties and lay the groundwork for smooth, organized succession.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Estate & Partnership Obligations</h3>
+                    <p>+ We assist family members in navigating both the immediate and long-range duties required for Family Limited Partnerships and complex estate structures.</p>
+                </div>
             </div>
 
             <a href="consultation.html" class="gold-link">Learn More about Specialty Services &rarr;</a>
