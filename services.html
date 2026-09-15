@@ -1,56 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | 365Sundays Wealth LLC</title>
-    <style>
-        :root {
-            --primary-navy: #0A192F;
-            --accent-gold: #C5A880;
-            --text-dark: #333333;
-            --bg-light: #F8F9FA;
-            --white: #FFFFFF;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: var(--text-dark);
-            background-color: var(--white);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-
-        /* Navigation Header */
+ /* Navigation Header */
         header {
-            background-color: var(--primary-navy);
-            padding: 20px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid var(--accent-gold);
+            padding: 10px 40px;
+            border-bottom: 2px solid #1E293B;
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+         
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
         }
 
-        .logo {
-            color: var(--white);
-            font-size: 1.25rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-decoration: none;
+        .logo-img {
+            height: 75px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
         }
 
         nav a {
-            color: var(--white);
             text-decoration: none;
-            margin-left: 30px;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
+            color: var(--primary-blue);
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s;
         }
 
-        nav a:hover, nav a.active {
+        nav a:hover {
             color: var(--accent-gold);
         }
+
+
 
         /* Hero Section */
         .hero {
@@ -162,32 +155,53 @@
             background-color: #162b4d;
         }
 
-        /* Footer */
-        footer {
-            background-color: var(--primary-navy);
-            color: #aaa;
-            text-align: center;
-            padding: 40px 20px;
-            font-size: 0.85rem;
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
+            <!-- Footer Links & Disclosures -->
+    <footer>
+        <div class="footer-links">
+            <a href="https://adviserinfo.sec.gov/" target="_blank">IAPD</a>
+            <a href="https://adviserinfo.sec.gov/firm/summary/343914" target="_blank">Form ADV</a>
+            <a href="privacy_policy.html">Privacy Notice</a>
+            <a href="Disclosures.html">Disclosures</a>
+        </div>
+        <div class="copyright">
+            © 2026 365Sundays Wealth LLC. All rights reserved.
+        </div>
+    </footer>
+        
     </style>
 </head>
 <body>
 
-    <!-- Navigation Header -->
-    <header>
-        <a href="index.html" class="logo">365SUNDAYS WEALTH</a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="whoweserve.html">Who We Serve</a>
-            <a href="services.html" class="active">Services</a>
-        </nav>
-    </header>
+   <!-- Header & Navigation Bar -->
+<header style="display: grid; grid-template-columns: auto 1fr auto; grid-template-rows: auto auto; align-items: center; width: 100%; box-sizing: border-box; row-gap: 15px;">
+  
+  <!-- Left Column: Logo (Spans Both Lines) -->
+  <div style="grid-column: 1; grid-row: 1 / span 2; justify-self: start; align-self: center; padding-right: 20px;">
+    <img src="logo.jpg" alt="365Sundays Wealth Logo" style="height: 110px; display: block;">
+  </div>
+
+  <!-- Center Column: Title (Row 1, Centered) -->
+  <div style="grid-column: 2; grid-row: 1; justify-self: center; text-align: center;">
+   <h1 style="margin: 0; color: #0c1b33; font-family: Baskerville, 'Baskerville Old Face', Garamond, Georgia, serif; font-size: 36px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; white-space: nowrap;">
+   365SUNDAYS WEALTH
+   </h1>
+  </div>
+
+  <!-- Right Column: Navigation Links (Row 1, Far Right) -->
+  <nav style="grid-column: 3; grid-row: 1; justify-self: end; display: flex; gap: 20px; white-space: nowrap;">
+    <a href="index.html" style="color: var(--accent-gold);">Home</a>
+    <a href="services.html">Our Services</a>
+    <a href="whoweserve.html">Who We Serve</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="clientlogin.html">Client Login</a>
+  </nav>
+
+  <!-- Row 2: Private Wealth Consultation Button (Spans under Title & Nav, Aligned Far Right) -->
+  <div style="grid-column: 2 / span 2; grid-row: 2; justify-self: end; text-align: right;">
+    <a href="consultation.html" class="consultation-btn" style="display: inline-block;">Private Wealth Consultation</a>
+  </div>
+
+</header>
 
     <!-- Hero Section -->
     <section class="hero">
