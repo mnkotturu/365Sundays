@@ -320,37 +320,33 @@
 </head>
 <body>
  
-  <!-- Header & Navigation Bar -->
-<header style="display: block; width: 100%;">
+ 
+ <!-- Header & Navigation Bar -->
+<header style="display: grid; grid-template-columns: auto 1fr auto; grid-template-rows: auto auto; align-items: center; width: 100%; box-sizing: border-box; row-gap: 15px;">
+  
+  <!-- Left Column: Logo (Spans Both Lines) -->
+  <div style="grid-column: 1; grid-row: 1 / span 2; justify-self: start; align-self: center; padding-right: 20px;">
+    <img src="logo.jpg" alt="365Sundays Wealth Logo" style="height: 110px; display: block;">
+  </div>
 
-  <!-- ROW 1: Logo (Left), Title (Center), Navigation (Right) -->
-  <div style="display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; width: 100%; box-sizing: border-box;">
-    
-    <!-- Left Column: Logo -->
-    <div style="justify-self: start;">
-      <img src="logo.jpg" alt="365Sundays Wealth Logo" style="height: 55px;">
-    </div>
+  <!-- Center Column: Title (Row 1, Centered) -->
+  <div style="grid-column: 2; grid-row: 1; justify-self: center; text-align: center;">
+    <h1 style="margin: 0; font-size: 34px; letter-spacing: 1px; white-space: nowrap;">
+      365SUNDAYS WEALTH
+    </h1>
+  </div>
 
-    <!-- Center Column: Title (Always centered) -->
-    <div style="justify-self: center; text-align: center;">
-      <h1 style="margin: 0; font-size: 34px; letter-spacing: 1px; white-space: nowrap;">
-        365SUNDAYS WEALTH
-      </h1>
-    </div>
+  <!-- Right Column: Navigation Links (Row 1, Far Right) -->
+  <nav style="grid-column: 3; grid-row: 1; justify-self: end; display: flex; gap: 20px; white-space: nowrap;">
+    <a href="index.html" style="color: var(--accent-gold);">Home</a>
+    <a href="services.html">Our Services</a>
+    <a href="whoweserve.html">Who We Serve</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="clientlogin.html">Client Login</a>
+  </nav>
 
-    <!-- Right Column: Navigation Links -->
-    <nav style="justify-self: end; display: flex; gap: 20px; white-space: nowrap;">
-      <a href="index.html" style="color: var(--accent-gold);">Home</a>
-      <a href="services.html">Our Services</a>
-      <a href="whoweserve.html">Who We Serve</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="clientlogin.html">Client Login</a>
-    </nav>
-
-  </div> <!-- End Row 1 -->
-
-  <!-- ROW 2: Private Wealth Consultation Button (Right-aligned below) -->
-  <div style="display: block; width: 100%; text-align: right; margin-top: 15px; box-sizing: border-box;">
+  <!-- Row 2: Private Wealth Consultation Button (Spans under Title & Nav, Aligned Far Right) -->
+  <div style="grid-column: 2 / span 2; grid-row: 2; justify-self: end; text-align: right;">
     <a href="consultation.html" class="consultation-btn" style="display: inline-block;">Private Wealth Consultation</a>
   </div>
 
