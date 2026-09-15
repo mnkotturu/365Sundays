@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,38 +29,31 @@
 
         /* Navigation Header */
         header {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            grid-template-rows: auto auto;
             align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+            row-gap: 15px;
             padding: 10px 40px;
-            border-bottom: 2px solid #1E293B;
-            background: var(--white);
+            border-bottom: 2px solid var(--accent-gold);
+            background-color: var(--primary-blue);
             position: sticky;
             top: 0;
             z-index: 1000;
-        }
-         
-        .logo-container {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
-
-        .logo-img {
-            height: 75px;
-            width: auto;
-            object-fit: contain;
         }
 
         nav {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 20px;
+            white-space: nowrap;
         }
 
         nav a {
             text-decoration: none;
-            color: var(--primary-blue);
+            color: var(--white);
             font-weight: 500;
             font-size: 15px;
             transition: color 0.2s;
@@ -71,18 +64,19 @@
         }
 
         .consultation-btn {
-            background-color: var(--primary-blue);
-            color: var(--white);
+            background-color: var(--accent-gold);
+            color: var(--primary-blue);
             padding: 10px 20px;
             border-radius: 4px;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 14px;
-            transition: background-color 0.2s;
+            transition: background-color 0.2s, color 0.2s;
         }
 
         .consultation-btn:hover {
-            background-color: var(--accent-gold);
+            background-color: var(--white);
+            color: var(--primary-blue);
         }
 
         /* Hero Section  */
@@ -304,8 +298,8 @@
             }
             header {
                 padding: 15px 20px;
-                flex-direction: column;
-                gap: 15px;
+                grid-template-columns: 1fr;
+                text-align: center;
             }
             nav {
                 flex-wrap: wrap;
@@ -320,9 +314,8 @@
 </head>
 <body>
  
- 
  <!-- Header & Navigation Bar -->
-<header style="display: grid; grid-template-columns: auto 1fr auto; grid-template-rows: auto auto; align-items: center; width: 100%; box-sizing: border-box; row-gap: 15px;">
+<header>
   
   <!-- Left Column: Logo (Spans Both Lines) -->
   <div style="grid-column: 1; grid-row: 1 / span 2; justify-self: start; align-self: center; padding-right: 20px;">
@@ -331,13 +324,13 @@
 
   <!-- Center Column: Title (Row 1, Centered) -->
   <div style="grid-column: 2; grid-row: 1; justify-self: center; text-align: center;">
-   <h1 style="margin: 0; color: #0c1b33; font-family: Baskerville, 'Baskerville Old Face', Garamond, Georgia, serif; font-size: 36px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; white-space: nowrap;">
+   <h1 style="margin: 0; color: var(--white); font-family: Baskerville, 'Baskerville Old Face', Garamond, Georgia, serif; font-size: 36px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; white-space: nowrap;">
    365SUNDAYS WEALTH
    </h1>
   </div>
 
   <!-- Right Column: Navigation Links (Row 1, Far Right) -->
-  <nav style="grid-column: 3; grid-row: 1; justify-self: end; display: flex; gap: 20px; white-space: nowrap;">
+  <nav style="grid-column: 3; grid-row: 1; justify-self: end;">
     <a href="index.html" style="color: var(--accent-gold);">Home</a>
     <a href="services.html">Our Services</a>
     <a href="whoweserve.html">Who We Serve</a>
@@ -345,7 +338,7 @@
     <a href="clientlogin.html">Client Login</a>
   </nav>
 
-  <!-- Row 2: Private Wealth Consultation Button (Spans under Title & Nav, Aligned Far Right) -->
+  <!-- Row 2: Private Wealth Consultation Button -->
   <div style="grid-column: 2 / span 2; grid-row: 2; justify-self: end; text-align: right;">
     <a href="consultation.html" class="consultation-btn" style="display: inline-block;">Private Wealth Consultation</a>
   </div>
