@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Wealth Consultation | 365Sundays Wealth LLC</title>
+    <style>
+        :root {
+            --primary-blue: #0A192F;
+            --accent-gold: #C5A059;
+            --text-dark: #333333;
+            --bg-light: #f5f4ef;
+            --white: #FFFFFF;
+            --border-color: #E2E8F0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        /* Navigation Header */
+        header {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            grid-template-rows: auto auto;
+            align-items: center;
+            width: 100%;
+            row-gap: 15px;
+            padding: 10px 40px;
+            border-bottom: 2px solid var(--accent-gold);
+            background-color: var(--primary-blue);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            white-space: nowrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        .consultation-btn {
+            background-color: var(--accent-gold);
+            color: var(--primary-blue);
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .consultation-btn:hover {
+            background-color: var(--white);
+            color: var(--primary-blue);
+        }
+
+        /* Container Layout */
+        .container {
+            max-width: 850px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .page-intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .page-intro h1 {
+            font-size: 34px;
+            color: var(--primary-blue);
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+
+        .page-intro p {
+            font-size: 17px;
+            color: #4A5568;
+            max-width: 750px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Form Styling */
+        .form-card {
+            background-color: var(--bg-light);
+            border: 1px solid var(--border-color);
+            border-top: 4px solid var(--accent-gold);
+            border-radius: 8px;
+            padding: 40px;
+        }
+
+        .form-section {
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .form-section:last-of-type {
+            border-bottom: none;
+            margin-bottom: 10px;
+        }
+
+        .section-heading {
+            font-size: 20px;
+            color: var(--primary-blue);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .section-note {
+            font-size: 14px;
+            color: #718096;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #CBD5E0;
+            border-radius: 4px;
+            font-size: 15px;
+            background-color: var(--white);
+            color: var(--text-dark);
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input:focus, select:focus {
+            border-color: var(--accent-gold);
+        }
+
+        /* Radio & Checkbox Styling */
+        .options-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .option-label {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 15px;
+            font-weight: 400;
+            color: #2D3748;
+            cursor: pointer;
+            line-height: 1.4;
+        }
+
+        .option-label input {
+            margin-top: 3px;
+            accent-color: var(--primary-blue);
+        }
+
+        .submit-btn {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border: none;
+            padding: 16px 32px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.2s;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--accent-gold);
+            color: var(--primary-blue);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 80px;
+            border-top: 2px solid var(--accent-gold);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 14px;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--accent-gold);
+        }
+
+        .copyright {
+            font-size: 13px;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 768px) {
+            .form-grid { grid-template-columns: 1fr; }
+            .form-group.full-width { grid-column: span 1; }
+            header { padding: 15px 20px; grid-template-columns: 1fr; text-align: center; }
+            nav { flex-wrap: wrap; justify-content: center; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header>
+      <div style="grid-column: 1; grid-row: 1 / span 2; justify-self: start; align-self: center; padding-right: 20px;">
+        <img src="logo.jpg" alt="365Sundays Wealth Logo" style="height: 110px; display: block;">
+      </div>
+
+      <div style="grid-column: 2; grid-row: 1; justify-self: center; text-align: center;">
+       <h1 style="margin: 0; color: var(--white); font-family: Baskerville, 'Baskerville Old Face', Garamond, Georgia, serif; font-size: 36px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; white-space: nowrap;">
+       365SUNDAYS WEALTH
+       </h1>
+      </div>
+
+      <nav style="grid-column: 3; grid-row: 1; justify-self: end;">
+        <a href="index.html">Home</a>
+        <a href="services.html">Our Services</a>
+        <a href="whoweserve.html">Who We Serve</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="clientlogin.html">Client Login</a>
+      </nav>
+
+      <div style="grid-column: 2 / span 2; grid-row: 2; justify-self: end; text-align: right;">
+        <a href="consultation.html" class="consultation-btn" style="display: inline-block;">Private Wealth Consultation</a>
+      </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+        <div class="page-intro">
+            <h1>Private Wealth Consultation Inquiry</h1>
+            <p>Comprehensive financial planning and wealth management for individuals and families seeking dedicated, long-term guidance.</p>
+        </div>
+
+        <!-- Formspree Endpoint Live Integration -->
+        <form action="https://formspree.io/f/xqpazlnw" method="POST" class="form-card">
+            
+            <!-- Section 1: Contact Information -->
+            <div class="form-section">
+                <h2 class="section-heading">1. Contact Information</h2>
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="Full Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <select id="age" name="Age" required>
+                            <option value="" disabled selected>Select Age</option>
+                            <script>
+                                for(let i=20; i<=110; i++) {
+                                    document.write(`<option value="${i}">${i}</option>`);
+                                }
+                            </script>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="maritalStatus">Marital Status</label>
+                        <select id="maritalStatus" name="Marital Status" required>
+                            <option value="" disabled selected>Select Status</option>
+                            <option value="Single">Single</option>
+                            <option value="Married">Married</option>
+                            <option value="Divorced">Divorced</option>
+                            <option value="Widowed">Widowed</option>
+                            <option value="Separated">Separated</option>
+                            <option value="Domestic Partner">Domestic Partner</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="Email Address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="Phone Number" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="preferredContact">Preferred Contact Method</label>
+                        <select id="preferredContact" name="Preferred Contact Method" required>
+                            <option value="Phone">Phone</option>
+                            <option value="Email">Email</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Engagement Focus -->
+            <div class="form-section">
+                <h2 class="section-heading">2. Engagement Focus</h2>
+                <p class="section-note">How can we assist you? (Select one)</p>
+                <div class="options-list">
+                    <label class="option-label">
+                        <input type="radio" name="Engagement Focus" value="Comprehensive Financial Planning Only" required>
+                        <span><strong>Comprehensive Financial Planning Only</strong> (Fee-only strategic blueprint and guidance)</span>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="Engagement Focus" value="Assets Under Management (AUM) Only">
+                        <span><strong>Assets Under Management (AUM) Only</strong> (Continuous portfolio management and execution)</span>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="Engagement Focus" value="Both Financial Planning & AUM">
+                        <span><strong>Both Financial Planning & AUM</strong> (Integrated, year-round wealth advisory)</span>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="Engagement Focus" value="Retirement Plan Consulting">
+                        <span><strong>Retirement Plan Consulting</strong> (Setup and guidance of employer plans like 401(k) profit-sharing plans, SIMPLE IRAs, SEP IRAs etc.)</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Section 3: Portfolio & Net Worth Alignment -->
+            <div class="form-section">
+                <h2 class="section-heading">3. Portfolio & Net Worth Alignment</h2>
+                <p class="section-note">Note: To ensure our advisory resources and strategies are appropriately aligned with your goals, please indicate your investable asset level.</p>
+                
+                <div class="form-group">
+                    <label for="investableAssets">Estimated Investable Assets</label>
+                    <select id="investableAssets" name="Estimated Investable Assets" required>
+                        <option value="" disabled selected>Select Asset Tier</option>
+                        <option value="Under $500,000">Under $500,000</option>
+                        <option value="$500,000 – $1,000,000">$500,000 – $1,000,000</option>
+                        <option value="$1,000,000 – $3,000,000">$1,000,000 – $3,000,000</option>
+                        <option value="$3,000,000 – $5,000,000">$3,000,000 – $5,000,000</option>
+                        <option value="$5,000,000+">$5,000,000+</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Section 4: Primary Objectives -->
+            <div class="form-section">
+                <h2 class="section-heading">4. Primary Objectives</h2>
+                <p class="section-note">What are your primary financial priorities at this stage? (Check all that apply)</p>
+                <div class="options-list">
+                    <label class="option-label">
+                        <input type="checkbox" name="Primary Objectives[]" value="Retirement income planning & transition">
+                        <span>Retirement income planning & transition</span>
+                    </label>
+                    <label class="option-label">
+                        <input type="checkbox" name="Primary Objectives[]" value="Tax-efficient investment structuring & portfolio rebalancing">
+                        <span>Tax-efficient investment structuring & portfolio rebalancing</span>
+                    </label>
+                    <label class="option-label">
+                        <input type="checkbox" name="Primary Objectives[]" value="Capital protection & risk management">
+                        <span>Capital protection & risk management</span>
+                    </label>
+                    <label class="option-label">
+                        <input type="checkbox" name="Primary Objectives[]" value="Comprehensive estate or multi-generational wealth transfer">
+                        <span>Comprehensive estate or multi-generational wealth transfer</span>
+                    </label>
+                </div>
+
+                <div class="form-group" style="margin-top: 15px;">
+                    <label for="otherObjective">Other (Please specify):</label>
+                    <input type="text" id="otherObjective" name="Other Objective Details">
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Consultation Inquiry</button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="https://adviserinfo.sec.gov/" target="_blank">IAPD</a>
+            <a href="https://adviserinfo.sec.gov/firm/summary/343914" target="_blank">Form ADV</a>
+            <a href="privacy_policy.html">Privacy Notice</a>
+            <a href="Disclosures.html">Disclosures</a>
+        </div>
+        <div class="copyright">
+            © 2026 365Sundays Wealth LLC. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
