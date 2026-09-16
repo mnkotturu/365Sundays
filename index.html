@@ -6,11 +6,13 @@
     <title>365Sundays Wealth LLC | Independent Fee-Based RIA</title>
     <style>
         :root {
+            --primary-navy: #0c1b33;
             --primary-blue: #0A192F;
             --accent-gold: #C5A059;
             --text-dark: #333333;
             --bg-light: #f5f4ef;
             --white: #FFFFFF;
+            --border-color: #333333;
         }
 
         * {
@@ -79,52 +81,9 @@
             color: var(--primary-blue);
         }
 
-        /* Hero Section  */
-        .hero {
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            text-align: center;
-            padding: 40px 20px;
-            border-bottom: 1px solid #E2E8F0;
-        }
-
-        .hero h1 {
-            font-size: 38px;
-            font-weight: 400;
-            max-width: 800px;
-            margin: 0 auto 15px auto;
-            color: var(--primary-blue);
-            letter-spacing: -0.5px;
-            line-height: 1.25;
-        }
-
-        .hero p {
-            color: #4A5568;
-            font-size: 1.1rem;
-            max-width: 720px;
-            margin: 0 auto 10px auto;
-            line-height: 1.6;
-        }
-
-        .hero-btn {
-            display: inline-block;
-            background-color: var(--accent-gold);
-            color: var(--primary-blue);
-            padding: 14px 30px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            transition: background-color 0.2s;
-        }
-
-        .hero-btn:hover {
-            background-color: var(--white);
-        }
-
         /* Main Content Layout */
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 60px auto;
             padding: 0 20px;
         }
@@ -135,18 +94,22 @@
         }
 
         .intro-section h2 {
-            font-size: 30px;
+            font-size: 32px;
+            font-weight: 400;
             color: var(--primary-blue);
             margin-bottom: 20px;
             border-left: none;
             padding-left: 0;
+            letter-spacing: -0.5px;
+            line-height: 1.25;
         }
 
         .intro-section p {
-            font-size: 17px;
+            font-size: 1.1rem;
             color: #4A5568;
-            max-width: 780px;
+            max-width: 850px;
             margin: 0 auto 15px auto;
+            line-height: 1.7;
         }
 
         /* Philosophy Callout Box */
@@ -161,14 +124,16 @@
 
         .philosophy-box h3 {
             font-size: 22px;
-            color: var(--primary-blue);
-            margin-bottom: 12px;
+            color: var(--primary-navy);
+            margin-bottom: 15px;
+            font-weight: 600;
         }
 
         .philosophy-box p {
-            font-size: 16px;
-            color: #4A5568;
-            margin-bottom: 12px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 15px;
         }
 
         .philosophy-box p:last-child {
@@ -197,14 +162,19 @@
         }
 
         .pillar-card h3, .value-card h3 {
-            font-size: 18px;
-            color: var(--primary-blue);
-            margin-bottom: 10px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 12px;
         }
 
         .pillar-card p, .value-card p {
-            font-size: 15px;
-            color: #555;
+            font-size: 0.90rem;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #2c3e50;
             margin-bottom: 0;
         }
 
@@ -215,12 +185,14 @@
             margin-bottom: 20px;
             border-left: 4px solid var(--accent-gold);
             padding-left: 12px;
+            font-weight: 500;
         }
 
         p {
             margin-bottom: 20px;
-            font-size: 16px;
-            color: #4A5568;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #2c3e50;
         }
 
         .divider {
@@ -244,16 +216,23 @@
 
         .founder-header h3 {
             font-size: 26px;
-            color: var(--primary-blue);
+            color: var(--primary-navy);
+            font-weight: 600;
         }
 
         .founder-title {
-            font-size: 15px;
+            font-size: 14px;
             color: var(--accent-gold);
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             margin-top: 5px;
+        }
+
+        .founder-section p {
+            color: #2c3e50;
+            font-size: 0.95rem;
+            line-height: 1.65;
         }
 
         /* Footer */
@@ -306,8 +285,8 @@
                 justify-content: center;
                 gap: 15px;
             }
-            .hero h1 {
-                font-size: 32px;
+            .intro-section h2 {
+                font-size: 28px;
             }
         }
     </style>
@@ -317,19 +296,19 @@
  <!-- Header & Navigation Bar -->
 <header>
   
-  <!-- Left Column: Logo (Spans Both Lines) -->
+  <!-- Left Column: Logo -->
   <div style="grid-column: 1; grid-row: 1 / span 2; justify-self: start; align-self: center; padding-right: 20px;">
     <img src="logo.jpg" alt="365Sundays Wealth Logo" style="height: 110px; display: block;">
   </div>
 
-  <!-- Center Column: Title (Row 1, Centered) -->
+  <!-- Center Column: Title -->
   <div style="grid-column: 2; grid-row: 1; justify-self: center; text-align: center;">
    <h1 style="margin: 0; color: var(--white); font-family: Baskerville, 'Baskerville Old Face', Garamond, Georgia, serif; font-size: 36px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; white-space: nowrap;">
    365SUNDAYS WEALTH
    </h1>
   </div>
 
-  <!-- Right Column: Navigation Links (Row 1, Far Right) -->
+  <!-- Right Column: Navigation Links -->
   <nav style="grid-column: 3; grid-row: 1; justify-self: end;">
     <a href="index.html" style="color: var(--accent-gold);">Home</a>
     <a href="services.html">Our Services</a>
@@ -351,7 +330,7 @@
         <!-- Brand Story Intro -->
         <div class="intro-section">
             <h2>Building wealth so every day feels like Sunday</h2>
-            <p>365 Sundays Wealth was born from a simple but powerful idea: financial freedom should feel like waking up on a Sunday morning—no alarm, no rush, just the freedom to live life on your own terms.Our mission is to equip everyday people with the knowledge, tools, and mindset to build lasting financial freedom. Independent, fee-based fiduciary wealth management designed to bring clarity and purpose to your life. </p>
+            <p>365 Sundays Wealth was born from a simple but powerful idea: financial freedom should feel like waking up on a Sunday morning—no alarm, no rush, just the freedom to live life on your own terms. Our mission is to equip everyday people with the knowledge, tools, and mindset to build lasting financial freedom. Independent, fee-based fiduciary wealth management designed to bring clarity and purpose to your life.</p>
         </div>
 
         <!-- Why 365 Sundays Philosophy -->
@@ -359,9 +338,7 @@
             <h3>Why 365 Sundays?</h3>
             <p>Think about how you feel on a Sunday morning. No obligations pulling at you. No alarm dragging you out of bed. Just the freedom to do what matters most—spend time with family, pursue a passion, or simply rest.</p>
             <p>Now imagine feeling that way every single day of the year. That's the vision behind 365 Sundays Wealth. We're not just teaching people how to invest—we're teaching people how to design a life where financial stress is replaced by financial confidence.</p>
-            <p>True wealth is the ability to wake up each morning and choose how you spend your day. We're here to help you build that. Institutional grade guidance, tailored personally to you. A diversified investment strategy
-                built on experience.Managing significant wealth shouldn't feel overwhelming. When financial structures become unnecessarily complex, valuable opportunities slip through the cracks.
-                At 365Sundays Wealth, we bring clarity and structure to your financial life, acting as your trusted advisor to transform complexity into a cohesive, long-term plan.</p>
+            <p>True wealth is the ability to wake up each morning and choose how you spend your day. We're here to help you build that. Institutional grade guidance, tailored personally to you. A diversified investment strategy built on experience. Managing significant wealth shouldn't feel overwhelming. When financial structures become unnecessarily complex, valuable opportunities slip through the cracks. At 365Sundays Wealth, we bring clarity and structure to your financial life, acting as your trusted advisor to transform complexity into a cohesive, long-term plan.</p>
         </div>
 
       
