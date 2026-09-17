@@ -44,6 +44,15 @@
             z-index: 1000;
         }
 
+        .header-title {
+            margin: 0;
+            color: var(--white);
+            font-size: 40px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            white-space: nowrap;
+        }
+
         nav {
             display: flex;
             align-items: center;
@@ -82,7 +91,7 @@
         /* Container Layout */
         .container {
             max-width: 850px;
-            margin: 50px auto;
+            margin: 40px auto;
             padding: 0 20px;
         }
 
@@ -92,14 +101,14 @@
         }
 
         .page-intro h1 {
-            font-size: 34px;
+            font-size: 26px;
+            font-weight: 500;
             color: var(--primary-blue);
             margin-bottom: 12px;
-            font-weight: 400;
         }
 
         .page-intro p {
-            font-size: 17px;
+            font-size: 0.95rem;
             color: #4A5568;
             max-width: 750px;
             margin: 0 auto;
@@ -108,11 +117,12 @@
 
         /* Form Styling */
         .form-card {
-            background-color: var(--bg-light);
+            background-color: var(--white);
             border: 1px solid var(--border-color);
             border-top: 4px solid var(--accent-gold);
             border-radius: 8px;
             padding: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
         }
 
         .form-section {
@@ -127,14 +137,14 @@
         }
 
         .section-heading {
-            font-size: 20px;
+            font-size: 1.05rem;
             color: var(--primary-blue);
             margin-bottom: 8px;
             font-weight: 600;
         }
 
         .section-note {
-            font-size: 14px;
+            font-size: 0.88rem;
             color: #718096;
             margin-bottom: 20px;
             font-style: italic;
@@ -260,11 +270,40 @@
             opacity: 0.6;
         }
 
-        @media (max-width: 768px) {
-            .form-grid { grid-template-columns: 1fr; }
-            .form-group.full-width { grid-column: span 1; }
-            header { padding: 15px 20px; grid-template-columns: 1fr; text-align: center; }
-            nav { flex-wrap: wrap; justify-content: center; gap: 15px; }
+        /* Mobile Optimization */
+        @media (max-width: 850px) {
+            .form-grid { 
+                grid-template-columns: 1fr; 
+            }
+            .form-group.full-width { 
+                grid-column: span 1; 
+            }
+            .form-card {
+                padding: 24px 18px;
+            }
+            header { 
+                padding: 15px 20px; 
+                grid-template-columns: 1fr; 
+                text-align: center; 
+            }
+            .header-title {
+                font-size: 26px;
+                white-space: normal;
+            }
+            nav { 
+                flex-wrap: wrap; 
+                justify-content: center; 
+                gap: 15px; 
+            }
+            .page-intro h1 {
+                font-size: 22px;
+            }
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            select {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -277,13 +316,13 @@
       </div>
 
       <div style="grid-column: 2; grid-row: 1; justify-self: center; text-align: center;">
-<h1 style="margin: 0; color: var(--white); font-size: 40px; font-weight: 700; letter-spacing: 2px; white-space: nowrap;">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lora:wght@700&display=swap');
-  </style>
-  <span style="font-family: 'Lora', Georgia, serif; letter-spacing: 0.5px;">365Sundays</span>
-  <span style="font-family: 'Cinzel', 'Trajan Pro', serif; letter-spacing: 2px;">WEALTH</span>
-</h1>
+        <h1 class="header-title">
+          <style>
+            @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lora:wght@700&display=swap');
+          </style>
+          <span style="font-family: 'Lora', Georgia, serif; letter-spacing: 0.5px;">365Sundays</span>
+          <span style="font-family: 'Cinzel', 'Trajan Pro', serif; letter-spacing: 2px;">WEALTH</span>
+        </h1>
       </div>
 
       <nav style="grid-column: 3; grid-row: 1; justify-self: end;">
