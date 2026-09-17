@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -44,6 +44,15 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+        }
+
+        .header-title {
+            margin: 0;
+            color: var(--white);
+            font-size: 40px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            white-space: nowrap;
         }
 
         nav {
@@ -284,6 +293,7 @@
             opacity: 0.6;
         }
 
+        /* Responsive Mobile Styles */
         @media (max-width: 768px) {
             .pillars-grid, .values-grid {
                 grid-template-columns: 1fr;
@@ -293,13 +303,17 @@
                 grid-template-columns: 1fr;
                 text-align: center;
             }
+            .header-title {
+                font-size: 26px;
+                white-space: normal;
+            }
             nav {
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 15px;
             }
-            .intro-section h2 {
-                font-size: 26px;
+            .intro-section h2, h2 {
+                font-size: 22px;
             }
             .founder-section {
                 flex-direction: column;
@@ -326,13 +340,13 @@
 
   <!-- Center Column: Title -->
   <div style="grid-column: 2; grid-row: 1; justify-self: center; text-align: center;">
-<h1 style="margin: 0; color: var(--white); font-size: 40px; font-weight: 700; letter-spacing: 2px; white-space: nowrap;">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lora:wght@700&display=swap');
-  </style>
-  <span style="font-family: 'Lora', Georgia, serif; letter-spacing: 0.5px;">365Sundays</span>
-  <span style="font-family: 'Cinzel', 'Trajan Pro', serif; letter-spacing: 2px;">WEALTH</span>
-</h1>
+    <h1 class="header-title">
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lora:wght@700&display=swap');
+      </style>
+      <span style="font-family: 'Lora', Georgia, serif; letter-spacing: 0.5px;">365Sundays</span>
+      <span style="font-family: 'Cinzel', 'Trajan Pro', serif; letter-spacing: 2px;">WEALTH</span>
+    </h1>
   </div>
 
   <!-- Right Column: Navigation Links -->
