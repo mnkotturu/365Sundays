@@ -257,6 +257,45 @@
             line-height: 1.65;
         }
 
+        /* Contact Section Styling */
+        .contact-section {
+            background-color: var(--bg-light);
+            border: 1px solid #E2E8F0;
+            border-top: 3px solid var(--accent-gold);
+            border-radius: 8px;
+            padding: 30px 40px;
+            margin-top: 30px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-item h4 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 6px;
+        }
+
+        .contact-item p, .contact-item a {
+            font-size: 0.95rem;
+            color: var(--primary-navy);
+            font-weight: 500;
+            text-decoration: none;
+            line-height: 1.4;
+            margin-bottom: 0;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent-gold);
+        }
+
         /* Footer */
         footer {
             background-color: var(--primary-blue);
@@ -295,7 +334,7 @@
 
         /* Responsive Mobile Styles */
         @media (max-width: 768px) {
-            .pillars-grid, .values-grid {
+            .pillars-grid, .values-grid, .contact-grid {
                 grid-template-columns: 1fr;
             }
             header {
@@ -324,6 +363,10 @@
             .founder-image-container {
                 width: 180px;
                 margin-bottom: 10px;
+            }
+            .contact-section {
+                padding: 25px;
+                text-align: center;
             }
         }
     </style>
@@ -449,6 +492,25 @@
                 <p>With 16 years of deep experience across the financial industry—spanning wealth management, broker-dealer and clearing services, credit services, collateral management, and developing strategic operational solutions for RIAs—our founder Madhavi who is a Certified Financial Planner (CFP®) created 365Sundays Wealth to bring institutional-grade precision to private wealth management.</p>
                 <p>Bringing a well-rounded and deep analytical perspective, she possesses extensive knowledge across global fixed income, equity analysis, tax loss harvesting, real estate, and international investments. Believing that everyone deserves access to clear wealth-building knowledge, she translates complex financial mechanics into actionable, real-world strategies designed to help clients secure lasting financial freedom.</p>
                 <p style="margin-bottom: 0;">Client journeys from financial uncertainty to freedom is the blueprint behind everything we do. When she isn't helping clients, she loves cycling, tending to her garden, dancing, and spending quality time with her husband, son and two daughters.</p>
+            </div>
+        </div>
+
+        <!-- Get In Touch Section -->
+        <h2>Get In Touch</h2>
+        <div class="contact-section">
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h4>Office Address</h4>
+                    <p>5426 Carter Rd<br>Lake Mary, FL 32746</p>
+                </div>
+                <div class="contact-item">
+                    <h4>Direct Phone</h4>
+                    <p><a href="tel:+14077921384">(407) 792-1384</a></p>
+                </div>
+                <div class="contact-item">
+                    <h4>Email Inquiry</h4>
+                    <p><a href="mailto:inquiries@365sundayswealth.com">inquiries@365sundayswealth.com</a></p>
+                </div>
             </div>
         </div>
 
