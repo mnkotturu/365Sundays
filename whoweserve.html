@@ -6,11 +6,13 @@
     <title>Who We Serve | 365Sundays Wealth LLC</title>
     <style>
         :root {
+            --primary-navy: #0c1b33;
             --primary-blue: #0A192F;
             --accent-gold: #C5A059;
             --text-dark: #333333;
             --bg-light: #f5f4ef;
             --white: #FFFFFF;
+            --border-color: #E2E8F0;
         }
 
         * {
@@ -91,7 +93,7 @@
         /* Main Content Layout */
         .container {
             max-width: 1000px;
-            margin: 40px auto;
+            margin: 60px auto;
             padding: 0 20px;
         }
 
@@ -102,18 +104,18 @@
         }
 
         .page-intro h1 {
-            font-size: 26px;
-            font-weight: 500;
+            font-size: 32px;
+            font-weight: 600;
             color: var(--primary-blue);
             margin-bottom: 20px;
         }
 
         .page-intro p {
-            font-size: 0.90rem;
+            font-size: 0.95rem;
             font-weight: 400;
             line-height: 1.6;
             color: #2c3e50;
-            max-width: 850px;
+            max-width: 900px;
             margin: 0 auto 15px auto;
         }
 
@@ -121,7 +123,7 @@
             font-size: 26px;
             font-weight: 500;
             color: var(--primary-blue);
-            margin-top: 40px;
+            margin-top: 50px;
             margin-bottom: 20px;
             text-align: center;
             position: relative;
@@ -148,15 +150,15 @@
         .profile-card {
             background-color: var(--bg-light);
             padding: 30px 25px;
-            border-radius: 8px;
-            border: 1px solid #E2E8F0;
-            border-top: 4px solid var(--accent-gold);
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            border-top: 3px solid var(--accent-gold);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .profile-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 12px -1px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.04);
         }
 
         .profile-card.full-width {
@@ -165,13 +167,13 @@
 
         .profile-card h3 {
             font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 10px;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: 12px;
         }
 
         .profile-card p {
-            font-size: 0.90rem;
+            font-size: 0.95rem;
             font-weight: 400;
             line-height: 1.6;
             color: #2c3e50;
@@ -180,35 +182,37 @@
 
         .divider {
             height: 1px;
-            background-color: #E2E8F0;
-            margin: 40px 0;
+            background-color: var(--border-color);
+            margin: 50px 0;
         }
 
         /* Support Grid */
         .support-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            gap: 25px;
             margin-top: 30px;
         }
 
         .support-item {
             background-color: var(--bg-light);
-            border: 1px solid #E2E8F0;
+            border: 1px solid var(--border-color);
             padding: 25px;
             border-radius: 6px;
-            border-left: 4px solid var(--primary-blue);
+            border-left: 4px solid var(--accent-gold);
         }
 
         .support-item h4 {
-            font-size: 0.98rem;
-            font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 8px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 10px;
         }
 
         .support-item p {
-            font-size: 0.90rem;
+            font-size: 0.95rem;
             font-weight: 400;
             line-height: 1.6;
             color: #2c3e50;
@@ -220,21 +224,21 @@
             text-align: center;
             background-color: var(--bg-light);
             padding: 40px 30px;
-            border-radius: 8px;
+            border-radius: 6px;
             margin-top: 50px;
-            border: 1px solid #E2E8F0;
-            border-top: 4px solid var(--accent-gold);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-gold);
         }
 
         .cta-box h3 {
             font-size: 22px;
             font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 12px;
+            color: var(--primary-navy);
+            margin-bottom: 15px;
         }
 
         .cta-box p {
-            font-size: 0.90rem;
+            font-size: 0.95rem;
             font-weight: 400;
             line-height: 1.6;
             color: #2c3e50;
@@ -249,7 +253,7 @@
             border-radius: 4px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 15px;
             transition: background-color 0.2s, color 0.2s;
         }
 
@@ -295,7 +299,7 @@
         }
 
         /* Mobile Optimization */
-        @media (max-width: 850px) {
+        @media (max-width: 768px) {
             .profile-grid, .support-grid {
                 grid-template-columns: 1fr;
             }
@@ -316,8 +320,17 @@
                 justify-content: center;
                 gap: 15px;
             }
-            .page-intro h1, .section-title {
+            .page-intro h1 {
+                font-size: 24px;
+            }
+            .section-title {
                 font-size: 22px;
+            }
+            .container {
+                margin: 30px auto;
+            }
+            .cta-box {
+                padding: 30px 20px;
             }
         }
     </style>
@@ -403,7 +416,7 @@
 
         <!-- How We Support Your Goals -->
         <h2 class="section-title">How We Support Your Goals</h2>
-        <p style="text-align: center; color: #2c3e50; font-size: 0.90rem; margin-bottom: 30px;">Across all engagements, our focus remains fixed on turning financial complexity into structured, actionable freedom:</p>
+        <p style="text-align: center; color: #2c3e50; font-size: 0.95rem; margin-bottom: 30px;">Across all engagements, our focus remains fixed on turning financial complexity into structured, actionable freedom:</p>
         
         <div class="support-grid">
             <div class="support-item">
